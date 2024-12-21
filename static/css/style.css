@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #00ffff;
+    color: #000;
+}
+
+.navbar .social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .social-icons a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar .social-icons a:hover {
+    transform: scale(1.2);
+    color: #00ffff;
+}
+
+.navbar .social-icons i {
+    font-size: 20px;
+}
+
+main {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+section {
+    margin: 50px 0;
+}
+
+section h2 {
+    color: #00ffff;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+section p {
+    color: #aaa;
+}
+.hero-section {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+.hero-image {
+    flex: 1;
+    background: url('https://via.placeholder.com/600x900') no-repeat center center/cover;
+    filter: brightness(0.8);
+}
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background: #0a0a0a;
+}
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.highlight {
+    color: #00ffff;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+.btn-read {
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: 2px solid #00ffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+.btn-read:hover {
+    background-color: #00ffff;
+    color: #121212;
+    border-color: #00ffff;
+}
