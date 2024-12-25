@@ -3,69 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Navbar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
-    <!-- Add Font Awesome for social icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
 </head>
 <body>
-
-    <div class="navbar">
-        <!-- <div class="logo">epitome.</div>gi add -->
-        <div class="nav-links">
-            <a href="#intro">Intro</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#works">Works</a>
-            <a href="#sayhello">Say Hello</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#works">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!-- <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-dribbble"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-        </div> -->
-    </div>
+    </nav>
 
-    <div class="hero-section">
-        <!-- Left Section: Image -->
-        <div class="hero-image">
+    <!-- Intro Section -->
+    <section id="intro">
+        <div class="container" >
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <img src="{{ url_for('static',filename='images/Kurtas-ch.webp') }}" alt="Profile Image" class="img-fluid profile-img">
+                </div>
+                <div class="col-lg-6 intro-text">
+                    <p class="mb-2">Hello! I'm</p>
+                    <h1>Gayathri <span class="highlight">Jayadevan</span></h1>
+                    <p class="lead mb-4">A passionate developer focused on creating beautiful and functional web experiences.</p>
+                    <a href="{{ url_for('resume') }}"><button class="resume-btn"> My Resume</button></a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Right Section: Content -->
-        <div class="hero-content">
-            <p class="highlight">Hello! I'm</p>
-            <h1>Jhone <span class="highlight">Smith</span></h1>
-            <p class="highlight">Author, Writer, Traveler</p>
-            <!-- <p>One Man. One Mission. Can He Go Beyond? One Man. One Mission. Can He Go Beyond?</p> -->
-            <a href="#" class="btn btn-read">Read Bio ></a>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto" style="border-radius: 15px;box-shadow: 0 5px 15px rgba(0,0,0,0.1); background: linear-gradient(135deg, var(--bg-light) 0%, var(--secondary-light) 100%); height: 380px;">
+                    <p class="text-center" style="margin-top: 60px;">Hello! My name is Gayathri Jayadevan, and I am an enthusiastic and detail-oriented Entry-Level Python Full-Stack Developer with a passion for crafting efficient, scalable, and visually appealing web applications.</p>
+                    <span>I specialize in:</span>
+                    <ul>
+                        <li>Backend Development: Leveraging the power of Python, Django, and Flask to create robust and efficient server-side applications.</li>
+                        <li>Frontend Development: Building responsive, user-friendly interfaces with HTML, CSS, JavaScript, and modern frameworks like React.js.</li>
+                        <li>Database Management: Designing and managing databases with MySQL and SQLite3 to ensure data integrity and optimal performance.</li>
+                    </ul>
+                </div>
+            </div>
+            <h4 class="section-title">Education</h4>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="education-card">
+                        <h3> Internships</h3>
+                        <p class="text-muted">2024 - Present</p>
+                        <p> Synnefo Solutions,Iyyattil </p>
+                        <p> 6month pythonfull stack development course with internship</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="education-card">
+                        <h3>Masters Degree in Computer Application with AI specialization</h3>
+                        <p class="text-muted">2024 - Present</p>
+                        <p>JAIN Online University</p>
+                        <p>Advanced studies in Computer application with specialization in AI.</p>
+                    </div>
+                </div>
+                <div class="col-md-7" style="margin-left: 300px;">
+                    <div class="education-card">
+                        <h3> Bachelor Degree in Computer Application </h3>
+                        <p class="text-muted">2021 - 2024 </p>
+                        <p>MG University</p>
+                        <p>CGPA:7.66</p>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6">
+                    <div class="education-card">
+                        <h3>UI/UX Design Certificate</h3>
+                        <p class="text-muted">2023</p>
+                        <p>Design Institute</p>
+                        <p>Professional certification in user interface and experience design principles.</p>
+                    </div>
+                </div> -->
+            </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">What I Can Offer</h2>
+        <div class="row g-4">
+            <!-- Web Development -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <ul class="service-list">
+                        <li>Frontend Development using HTML, CSS, JavaScript</li>
+                        <li>Responsive Design Implementation</li>
+                        <li>Basic Backend Development with Python</li>
+                    </ul>
+                </div>
+            </div>
 
-    <!-- <main>
-        <section id="intro">
-            <h2>Introduction</h2>
-            <p>Welcome to our website! Explore our services and projects to learn more about what we do.</p>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are a creative agency dedicated to delivering innovative solutions for our clients.</p>
-        </section>
-        <section id="services">
-            <h2>Services</h2>
-            <p>Our services include web development, graphic design, and digital marketing.</p>
-        </section>
-        <section id="works">
-            <h2>Our Works</h2>
-            <p>Check out our portfolio to see some of the amazing projects we've worked on.</p>
-        </section>
-        <section id="sayhello">
-            <h2>Say Hello</h2>
-            <p>Get in touch with us through our social media channels or send us a message.</p>
-        </section>
-    </main> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Database Management -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Management</h3>
+                    <ul class="service-list">
+                        <li>Database Design and Structure</li>
+                        <li>SQL Query Writing</li>
+                        <li>Basic Database Administration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version Control -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Version Control</h3>
+                    <ul class="service-list">
+                        <li>Git Repository Management</li>
+                        <li>Collaborative Development</li>
+                        <li>Code Version Management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Problem Solving -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Problem Solving</h3>
+                    <ul class="service-list">
+                        <li>Analytical Thinking</li>
+                        <li>Debugging and Testing</li>
+                        <li>Solution Development</li>
+                    </ul>
+                </div>
+            </div>
+
+             <!-- Communication & Presentation Skills -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Communication & Presentation</h3>
+                    <ul class="service-list">
+                        <li>Effective Verbal and Written Communication</li>
+                        <li>Engaging and Clear Presentations</li>
+                        <li>Collaborative Team Communication</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Continuous Learning -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Continuous Learning</h3>
+                    <ul class="service-list">
+                        <li>Quick Adaptation to New Technologies</li>
+                        <li>Strong Learning Ability</li>
+                        <li>Keeping Up with Industry Trends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="py-5">
+        <div class="container">
+            <h2 class="section-title">My Works</h2>
+            <div class="row g-4">
+                <!-- Academic Project -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="/static/images/project1.jpg" alt="E-commerce Project" class="img-fluid">
+                        </div>
+                        <div class="work-content">
+                            <h3>SMART HOMES(E-commerce Website)</h3>
+                            <p class="tech-stack">Python, Django,HTML,CSS, SQLite, Bootstrap</p>
+                            <p class="description">A full-stack e-commerce platform  specializing in smart
+                                home products, enhancing user experience and driving online sales.</p>
+                            <div class="work-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a href="https://github.com/Gayathrijayadevan/smart_homes" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Course Project -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="/static/images/project3.jpg" alt="Task Manager" class="img-fluid">
+                        </div>
+                        <div class="work-content">
+                            <h3> STUDENT MANAGEMENT SYSTEM</h3>
+                            <p class="tech-stack"> Python(Django), HTML, CSS, Bootstrap, SQLite3,
+                                RESTful API</p>
+                            <p class="description"> Developed a student management system website leveraging APIs for
+                                seamless data integration, real-time updates, and efficient user
+                                management.</p>
+                            <div class="work-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personal Project -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="/static/images/project2.jpg" alt="Weather App" class="img-fluid">
+                        </div>
+                        <div class="work-content">
+                            <h3> BETA TECHNOLOGIES(WEB APPLICATION)</h3>
+                            <p class="tech-stack">Python, Django,HTML,CSS, SQLite, Bootstrap</p>
+                            <p class="description"> Developed a responsive web application for an IT educational institute,
+                                featuring course management.</p>
+                            <div class="work-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a href="https://github.com/Gayathrijayadevan/beta" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <input type="tel" class="form-control" placeholder="Your Phone Number">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <div class="text-center">
+                                <button type="submit" class="send-btn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
