@@ -38,6 +38,7 @@ def fun2():
         con.close()
         print(name,email,phn,msg)
         return redirect(url_for('fun1'))
+if __name__=='__main__':
 
-app.run()
+    app.run()
 
