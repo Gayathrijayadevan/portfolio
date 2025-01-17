@@ -42,7 +42,7 @@
         <div class="container" >
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <img src="{{ url_for('static',filename='images/me.jpeg') }}" alt="Profile Image" class="img-fluid profile-img" style="margin-left: 100px;">
+                    <img src="{{ url_for('static',filename='images/me.jpeg') }}" alt="Profile Image" style="width: 100%; height: auto;" >
                 </div>
                 <div class="col-lg-6 intro-text">
                     <p class="mb-2">Hello! I'm</p>
@@ -59,7 +59,7 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="row mb-5">
-                <div class="col-lg-8 mx-auto" style="border-radius: 15px;box-shadow: 0 5px 15px rgba(0,0,0,0.1); background: linear-gradient(135deg, var(--bg-light) 0%, var(--secondary-light) 100%); height: 380px;">
+                <div class="col-lg-8 mx-auto" style="border-radius: 15px;box-shadow: 0 5px 15px rgba(0,0,0,0.1); background: linear-gradient(135deg, var(--bg-light) 0%, var(--secondary-light) 100%); height:auto;">
                     <p class="text-center" style="margin-top: 60px;">Hello! My name is Gayathri Jayadevan, and I am an enthusiastic and detail-oriented Entry-Level Python Full-Stack Developer with a passion for crafting efficient, scalable, and visually appealing web applications.</p>
                     <span>I specialize in:</span>
                     <ul>
@@ -87,7 +87,7 @@
                         <p>Advanced studies in Computer application with specialization in AI.</p>
                     </div>
                 </div>
-                <div class="col-md-7" style="margin-left: 300px;">
+                <div class="col-md-12" >
                     <div class="education-card">
                         <h3> Bachelor Degree in Computer Application </h3>
                         <p class="text-muted">2021 - 2024 </p>
@@ -213,7 +213,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="work-card">
                         <div class="work-image">
-                            <img src="{{ url_for('static',filename='images/WhatsApp Image 2025-01-10 at 1.11.43 AM.jpeg') }}" alt="E-commerce Project" class="img-fluid" style="object-fit: cover;width: 50%; height: 100%; margin-left: 100px;">
+                            <img src="{{ url_for('static',filename='images/Screenshot 2025-01-10 010405.png') }}" alt="E-commerce Project" class="img-fluid">
                         </div>
                         <div class="work-content">
                             <h3>SMART HOMES(E-commerce Website)</h3>
@@ -232,7 +232,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="work-card">
                         <div class="work-image">
-                            <img src="/static/images/project3.jpg" alt="Task Manager" class="img-fluid">
+                            <img src="{{ url_for('static',filename='images/Screenshot 2025-01-17 120002.png') }}" alt="Task Manager" class="img-fluid">
                         </div>
                         <div class="work-content">
                             <h3>CODEWHIZ</h3>
@@ -241,7 +241,7 @@
                                 frontend and SQLite3 database. Create, manage, and conduct programming quizzes with instant feedback and performance tracking.</p>
                             <div class="work-links">
                                 <a href="#" class="btn btn-sm btn-outline-primary">View Demo</a>
-                                <a href="#" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                                <a href="https://github.com/Gayathrijayadevan/codewhiz" class="btn btn-sm btn-outline-secondary">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -250,7 +250,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="work-card">
                         <div class="work-image">
-                            <img src="/static/images/project2.jpg" alt="Weather App" class="img-fluid">
+                            <img src="{{ url_for('static',filename='images/Screenshot 2025-01-17 120724.png') }}" alt="Weather App" class="img-fluid">
                         </div>
                         <div class="work-content">
                             <h3>BOOK MY SHOW(Frontend clone)</h3>
